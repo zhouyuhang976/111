@@ -1,0 +1,39 @@
+{
+  "symbol": "BTCUSDT",
+  "interval": "5m",
+  "lookback_limit": 120,
+  "poll_seconds": 20,
+  "mode": "live",
+  "market": "spot",
+  "strategy": {
+    "name": "ma_crossover",
+    "fast_period": 9,
+    "slow_period": 21
+  },
+  "risk": {
+    "stop_loss_pct": 0.015,
+    "take_profit_pct": 0.03,
+    "max_drawdown_pct": 0.12,
+    "cooldown_bars": 2
+  },
+  "execution": {
+    "quote_asset_budget": 50.0,
+    "max_position_pct": 1.0,
+    "state_path": "runtime/state.testnet.json",
+    "log_path": "runtime/trades.testnet.jsonl"
+  },
+  "paper": {
+    "starting_quote_balance": 1000.0,
+    "fee_rate": 0.001
+  },
+  "live": {
+    "use_testnet": true,
+    "recv_window": 5000
+  },
+  "futures": {
+    "enabled": false,
+    "leverage": 2,
+    "margin_type": "ISOLATED",
+    "allow_short": false
+  }
+}

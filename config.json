@@ -1,0 +1,39 @@
+{
+  "symbol": "EDENUSDT",
+  "interval": "4h",
+  "lookback_limit": 500,
+  "poll_seconds": 300,
+  "mode": "live",
+  "market": "futures",
+  "strategy": {
+    "name": "ma_crossover",
+    "fast_period": 5,
+    "slow_period": 80
+  },
+  "risk": {
+    "stop_loss_pct": 0.014,
+    "take_profit_pct": 0.035,
+    "max_drawdown_pct": 0.08,
+    "cooldown_bars": 1
+  },
+  "execution": {
+    "quote_asset_budget": 4.0,
+    "max_position_pct": 0.35,
+    "state_path": "runtime/state.futures.mainnet.json",
+    "log_path": "runtime/trades.futures.mainnet.jsonl"
+  },
+  "paper": {
+    "starting_quote_balance": 1000.0,
+    "fee_rate": 0.001
+  },
+  "live": {
+    "use_testnet": false,
+    "recv_window": 60000
+  },
+  "futures": {
+    "enabled": true,
+    "leverage": 10,
+    "margin_type": "CROSSED",
+    "allow_short": true
+  }
+}
